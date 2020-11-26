@@ -85,26 +85,60 @@ span {
   font-weight: 700;
 }
 
-.info-nav {
+#info-nav {
   padding: 10px;
   background-color: var(--infonav-bg-color);
 }
 
-.info-nav a {
+#info-nav a {
   color: var(--text-main-color);
   font-weight: 500;
   padding: 0 20px 0 20px;
 }
 
-.info-nav h5 {
+#info-nav h5 {
   font-weight: 700;
 }
 
-.info-nav h5 span {
+#info-nav h5 span {
   font-size: 1.5em;
   font-weight: 500;
 }
 
 .video-div h1 {
   color: black;
+}
+
+.youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.comparison-div {
+  background-image: linear-gradient(
+    to top left,
+    var(--nav-bg-color),
+    var(--landing-gradient-color)
+  );
+}
+
+.electric-div {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--nav-bg-color),
+    var(--landing-gradient-color)
+  );
+}
+
+.comparison-card {
+  border: 2px black solid;
 }
