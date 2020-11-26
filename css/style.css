@@ -1,0 +1,110 @@
+:root {
+  /* Text Colors */
+  --text-main-color: #f8f8f8;
+  --text-main-hover: #dfdfdf;
+
+  /* Nav Colors */
+  --nav-bg-color: #013973;
+  --nav-border-color: #0f263e;
+
+  /* Info Nav Colors */
+  --infonav-bg-color: #282828;
+
+  /* Landing Colors */
+  --landing-gradient-color: #0856a6;
+  --landing-span-color: #efd12b;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+nav {
+  background-color: var(--nav-bg-color);
+  color: var(--text-main-color);
+  padding: 10px;
+  border-bottom: 2px solid white;
+}
+
+nav a {
+  color: var(--text-main-color);
+  font-weight: 500;
+  padding: 0 20px 0 20px;
+}
+
+.active,
+nav a:hover {
+  color: var(--text-main-hover);
+  text-decoration: none;
+  border-bottom: 5px solid var(--nav-border-color);
+}
+
+nav img {
+  width: 250px;
+}
+
+.nav-arrow {
+  color: #013973;
+  width: 12px;
+}
+
+.small-nav {
+  color: var(--text-main-color);
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.landing-div {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--nav-bg-color),
+    var(--landing-gradient-color)
+  );
+}
+
+.landing-div span {
+  color: var(--landing-span-color);
+}
+
+.landing-img {
+  width: 100%;
+  padding: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--text-main-color);
+}
+
+span {
+  font-weight: 700;
+}
+
+.info-nav {
+  padding: 10px;
+  background-color: var(--infonav-bg-color);
+}
+
+.info-nav a {
+  color: var(--text-main-color);
+  font-weight: 500;
+  padding: 0 20px 0 20px;
+}
+
+.info-nav h5 {
+  font-weight: 700;
+}
+
+.info-nav h5 span {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.video-div h1 {
+  color: black;
+}
