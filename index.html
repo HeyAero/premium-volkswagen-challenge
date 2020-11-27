@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <nav class="d-flex align-items-center text-center">
@@ -64,8 +65,7 @@
         <a href="#">MAKE AN ENQUIRY</a>
       </div>
     </div>
-    <div class="video-div container pt-3">
-      <h1 class="text-center">Take a tour of the new e-Golf</h1>
+    <div class="video-div container pt-3 pb-3">
       <div class="youtube-wrapper">
         <iframe
           width="560"
@@ -77,61 +77,251 @@
         ></iframe>
       </div>
     </div>
-    <div class="comparison-div text-center p-5">
-      <div class="container pt-3">
-        <h1 class="text-center">Comparison</h1>
-        <div class="row">
+    <div class="comparison-div text-center pt-3 pb-3">
+      <div class="container">
+        <h1 class="text-center">COMPARISON</h1>
+        <div class="row p-3">
           <div class="comparison-card col-md-5">
             <div class="comparison-header">
               <h4>Volkswagen e-Golf</h4>
             </div>
             <div class="comparison-wrap">
-              <img src="" alt="Volkwagen e-Golf" />
+              <img src="images/e-golf2.png" alt="Volkwagen e-Golf" />
             </div>
             <div class="comparison-desc">
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/station-icon.png" />
+                  <p>Electric</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/co2-icon.png" />
+                  <p>0 g/km</p>
+                </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img src="images/manual-icon.png" />
+                  <p>Automatic</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/fuel-icon.png" />
+                  <p>0 mpg</p>
+                </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/speed-icon.png" />
+                  <p>201 BHP</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/gear-icon.png" />
+                  <p>1 Speed</p>
+                </div>
               </div>
             </div>
+            <hr />
           </div>
-          <div class="col-md-2 align-self-center">VS</div>
+          <div class="col-md-2 align-self-center pt-3 pb-3">
+            <!-- <img src="images/versus.png" /> -->
+            <strong>VS</strong>
+          </div>
           <div class="comparison-card col-md-5">
             <div class="comparison-header">
               <h4>Volkswagen Golf</h4>
             </div>
             <div class="comparison-wrap">
-              <img src="" alt="Volkwagen Golf" />
+              <img src="images/golf.png" alt="Volkwagen Golf" />
             </div>
             <div class="comparison-desc">
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/station-icon.png" />
+                  <p>Petrol</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/co2-icon.png" />
+                  <p>108 g/km</p>
+                </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img src="images/manual-icon.png" />
+                  <p>Manual</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/fuel-icon.png" />
+                  <p>46.3mpg</p>
+                </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">d</div>
-                <div class="col-sm-6">d</div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/speed-icon.png" />
+                  <p>113 BHP</p>
+                </div>
+                <div class="col-sm-6">
+                  <img class="mr-auto" src="images/gear-icon.png" />
+                  <p>6 Speed</p>
+                </div>
               </div>
             </div>
+            <hr />
           </div>
         </div>
       </div>
     </div>
     <div class="features-div">
-      <div class="container pt-3">
-        <h1 class="text-center">Features</h1>
+      <div class="container pt-3 pb-3">
+        <h1 class="text-center">FEATURES</h1>
+        <div class="d-none d-sm-none d-md-block">
+          <div class="row no-gutters text-center">
+            <div class="col-md-3">
+              <a id="feature-button-key" class="feature-button feature-active"
+                >KEY FEATURES</a
+              >
+            </div>
+            <div class="col-md-3">
+              <a id="feature-button-interior" class="feature-button"
+                >INTERIOR</a
+              >
+            </div>
+            <div class="col-md-3">
+              <a id="feature-button-exterior" class="feature-button"
+                >EXTERIOR</a
+              >
+            </div>
+            <div class="col-md-3">
+              <a id="feature-button-saftey" class="feature-button"
+                >SAFTEY & SECRUITY</a
+              >
+            </div>
+          </div>
+          <div class="feature-content">
+            <div id="feature-key" class="feature-content-section">
+              <div class="row no-gutters">
+                <div class="col-6">
+                  <img class="feature-image" src="images/feature1.webp" />
+                </div>
+                <div class="col-6 feature-description">
+                  <h2 class="text-center">Key Features</h2>
+                  <hr />
+                  <div class="row">
+                    <div class="col-6">
+                      <p>Lights On' Remainder warning buzzer</p>
+                      <p>8" colour touch screen</p>
+                      <p>Stop/Start system</p>
+                      <p>ACC - Adaptive cruise control with front assist</p>
+                      <p>
+                        Bluetooth telephone and audio connection for compatible
+                        devices
+                      </p>
+                    </div>
+                    <div class="col-6">
+                      <p>Driver alert system</p>
+                      <p>8 speakers</p>
+                      <p>
+                        Bluetooth telephone and audio connection for compatible
+                        devices
+                      </p>
+                      <p>Driver profile selection</p>
+                      <p>Drive mode selector</p>
+                      <p>Car-Net App-Connect</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="feature-interior" class="feature-content-section d-none">
+              <div class="row no-gutters">
+                <div class="col-6">
+                  <img class="feature-image" src="images/feature2.webp" />
+                </div>
+                <div class="col-6 feature-description">
+                  <h2 class="text-center">e-Golf Interior</h2>
+                  <hr />
+                  <div class="row">
+                    <div class="col-6">
+                      <p>12V socket in luggage compartment</p>
+                      <p>3 rear headrests</p>
+                      <p>Cooled glovebox</p>
+                      <p>Dust/pollen filter</p>
+                      <p>Front seat back storage pockets</p>
+                      <p>Illuminated vanity mirrors</p>
+                      <p>Interior light delay</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Overhead storage box</p>
+                      <p>Storage compartments in front doors</p>
+                      <p>Storage box in luggage compartment</p>
+                      <p>
+                        Front centre armrest with storage compartment and two
+                        rear air vents
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="feature-exterior" class="feature-content-section d-none">
+              <div class="row no-gutters">
+                <div class="col-6">
+                  <img class="feature-image" src="images/feature3.webp" />
+                </div>
+                <div class="col-6 feature-description">
+                  <h2 class="text-center">e-Golf Exterior</h2>
+                  <hr />
+                  <div class="row">
+                    <div class="col-6">
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="feature-saftey" class="feature-content-section d-none">
+              <div class="row no-gutters">
+                <div class="col-6">
+                  <img class="feature-image" src="images/feature4.webp" />
+                </div>
+                <div class="col-6 feature-description">
+                  <h2 class="text-center">Volkswagen Saftey & Secruity</h2>
+                  <hr />
+                  <div class="row">
+                    <div class="col-6">
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                      <p>Test</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="electric-div">
