@@ -17,6 +17,9 @@
 
   /* Feature Colors */
   --feature-bg-color: #f4f4f4;
+
+  /* Footer Colors */
+  --footer-border-color: #013367;
 }
 
 body {
@@ -33,13 +36,14 @@ nav {
 
 nav a {
   color: var(--text-main-color);
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 700;
   padding: 0 20px 0 20px;
 }
 
 .active,
 nav a:hover {
-  color: var(--text-main-hover);
+  color: var(--landing-span-color);
   text-decoration: none;
   border-bottom: 5px solid var(--nav-border-color);
 }
@@ -57,6 +61,20 @@ nav img {
   color: var(--text-main-color);
   font-weight: 500;
   padding-left: 20px;
+}
+
+.small-nav a {
+  color: var(--text-main-color);
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.small-nav a:hover,
+.small-nav a:active {
+  color: var(--landing-span-color);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .landing-div {
@@ -96,8 +114,20 @@ span {
 
 #info-nav a {
   color: var(--text-main-color);
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.05em;
   padding: 0 20px 0 20px;
+}
+
+#info-nav a:hover,
+#info-nav a:active,
+.info-nav-active {
+  color: var(--landing-span-color);
+  text-decoration: none;
+}
+
+.info-nav-active {
+  font-size: 1.1em;
 }
 
 #info-nav h5 {
@@ -243,4 +273,89 @@ p {
 
 .button-wrap {
   padding: 10px 0 20px 0;
+}
+
+.electric-div img {
+  width: 100%;
+}
+
+.electric-div p {
+  color: white;
+}
+
+.text-link {
+  color: var(--text-main-hover);
+  text-decoration: underline;
+}
+
+.text-link:hover,
+.text-link:active {
+  color: var(--landing-span-color);
+}
+
+.enquiry-div {
+  background-color: var(--infonav-bg-color);
+}
+
+.enquiry-div h1,
+.enquiry-div h2,
+.enquiry-div h3,
+.enquiry-div h4,
+.enquiry-div h5 {
+  color: var(--text-main-color);
+}
+
+form {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+form label {
+  color: black;
+  font-weight: 700;
+}
+
+form button {
+  background-color: var(--nav-bg-color);
+  border-radius: 25px;
+  color: var(--text-main-color);
+  font-weight: 700;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.wrap-img {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--nav-bg-color);
+  color: var(--text-main-color);
+}
+
+footer img {
+  width: 75%;
+}
+
+footer p {
+  color: var(--text-main-color);
+}
+
+.footer-links a {
+  border-bottom: 1px var(--footer-border-color) solid;
+  color: var(--text-main-color);
+  display: block;
+  padding: 10px;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  color: var(--landing-span-color);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: black;
 }
