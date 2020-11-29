@@ -2,7 +2,7 @@
 
 This repository contains code submitted for a coding project. I was tasked to make a landing page for the new Volkswagen e-Golf. For this task I used HTML, CSS, jQuery and JavaScript.
 
-###[GitHub Pages Link](https://heyaero.github.io/premium-volkswagen-challenge/)
+[GitHub Pages Link](https://heyaero.github.io/premium-volkswagen-challenge/)
 
 ## Imports & Plugins Used
 
