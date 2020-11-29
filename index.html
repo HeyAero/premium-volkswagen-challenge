@@ -5,73 +5,144 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Keywords" context="Premium, Volkswagen, e-Golf" />
+    <link rel="icon" href="images/icon.png" />
+    <!--STYLE SHEETS, FONT IMPORTS & ICONS IMPORT-->
+    <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Font import -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Icons import -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <!-- JQUERY & WAYPOINTS CDN -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Waypoints -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   </head>
   <body>
-    <nav class="d-flex align-items-center text-center">
-      <div class="mr-auto">
-        <img src="images/logo-alt.png" alt="Premium Volkswagen" />
+    <!-- HEADER -->
+    <header>
+      <nav class="d-flex align-items-center text-center">
+        <div class="mr-auto">
+          <img src="images/logo-alt.png" alt="Premium Volkswagen" />
+        </div>
+        <div class="d-none d-none-sm d-md-flex align-items-center">
+          <div class="dropdown-cars">
+            <a href="#">CARS</a>
+            <div class="dropdown-menu-cars">
+              <a href="#">New Cars</a>
+              <a href="#">Used Cars</a>
+              <a href="#">Value your Car</a>
+              <a href="#">Car Offers</a>
+            </div>
+          </div>
+          <div class="dropdown-vans">
+            <a href="#">VANS</a>
+            <div class="dropdown-menu-vans">
+              <a href="#">New Vans</a>
+              <a href="#">Used Vans</a>
+              <a href="#">Value your Van</a>
+              <a href="#">Van Offers</a>
+            </div>
+          </div>
+          <div class="dropdown-electric">
+            <a href="#" class="active">ELECTRIC CARS</a>
+            <div class="dropdown-menu-electric">
+              <a href="#">New Electric Cars</a>
+              <a href="#">Used Electric Cars</a>
+              <a href="#">Going Electric</a>
+              <a href="#">The new: e-Golf</a>
+            </div>
+          </div>
+          <div class="dropdown-services">
+            <a href="#">SERVICES</a>
+            <div class="dropdown-menu-services">
+              <a href="#">Make a Booking</a>
+              <a href="#">Servicing FAQ</a>
+              <a href="#">MOT Information</a>
+              <a href="#">Service Plans</a>
+              <a href="#">Trading Parts</a>
+              <a href="#">Purchase Parts and Extras</a>
+            </div>
+          </div>
+          <div>
+            <a href="#">OFFERS</a>
+          </div>
+        </div>
+        <a id="mobile-menu" class="d-block d-sm-block d-md-none">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </nav>
+      <div id="mobile-nav" class="d-none d-md-none">
+        <div class="d-flex justify-content-between align-items-center">
+          <a> CARS </a>
+          <a id="mobile-menu-cars" class="col-2 align-self-center">
+            <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div id="mobile-cars-dropdown" class="d-none">
+          <a href="#">New Cars</a>
+          <a href="#">Used Cars</a>
+          <a href="#">Value your Car</a>
+          <a href="#">Car Offers</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <a> VANS </a>
+          <a id="mobile-menu-vans" class="col-2 align-self-center">
+            <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div id="mobile-vans-dropdown" class="d-none">
+          <a href="#">New Vans</a>
+          <a href="#">Used Vans</a>
+          <a href="#">Value your Van</a>
+          <a href="#">Van Offers</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <a> ELECTRIC </a>
+          <a id="mobile-menu-electric" class="col-2 align-self-center">
+            <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div id="mobile-electric-dropdown" class="d-none">
+          <a href="#">New Electric Cars</a>
+          <a href="#">Used Electric Cars</a>
+          <a href="#">Going Electric</a>
+          <a href="#">The new: e-Golf</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <a> SERVICES </a>
+          <a id="mobile-menu-services" class="col-2 align-self-cente">
+            <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div id="mobile-services-dropdown" class="d-none">
+          <a href="#">Make a Booking</a>
+          <a href="#">Servicing FAQ</a>
+          <a href="#">MOT Information</a>
+          <a href="#">Service Plans</a>
+          <a href="#">Trading Parts</a>
+          <a href="#">Purchase Parts and Extras</a>
+        </div>
+        <a class="mobile-item"> OFFERS </a>
       </div>
-      <div class="d-none d-none-sm d-md-flex align-items-center">
-        <div class="dropdown-cars">
-          <a href="#">CARS</a>
-          <div class="dropdown-menu-cars">
-            <a href="#">New Cars</a>
-            <a href="#">Used Cars</a>
-            <a href="#">Value your Car</a>
-            <a href="#">Car Offers</a>
-          </div>
-        </div>
-        <div class="dropdown-vans">
-          <a href="#">VANS</a>
-          <div class="dropdown-menu-vans">
-            <a href="#">New Vans</a>
-            <a href="#">Used Vans</a>
-            <a href="#">Value your Van</a>
-            <a href="#">Van Offers</a>
-          </div>
-        </div>
-        <div class="dropdown-electric">
-          <a href="#" class="active">ELECTRIC CARS</a>
-          <div class="dropdown-menu-electric">
-            <a href="#">New Electric Cars</a>
-            <a href="#">Used Electric Cars</a>
-            <a href="#">Going Electric</a>
-            <a href="#">The new: e-Golf</a>
-          </div>
-        </div>
-        <div class="dropdown-services">
-          <a href="#">SERVICES</a>
-          <div class="dropdown-menu-services">
-            <a href="#">Make a Booking</a>
-            <a href="#">Servicing FAQ</a>
-            <a href="#">MOT Information</a>
-            <a href="#">Service Plans</a>
-            <a href="#">Trading Parts</a>
-            <a href="#">Purchase Parts and Extras</a>
-          </div>
-        </div>
-        <div>
-          <a href="#">OFFERS</a>
-        </div>
-      </div>
-    </nav>
+    </header>
+    <!-- LANDING PAGE SECTION -->
     <div class="landing-div">
+      <!--Small navigation bar at top of landing div-->
       <div class="small-nav p-3">
         <a href="#">HOME</a>
         <img src="images/arrow.svg" class="nav-arrow" />
@@ -79,6 +150,7 @@
         <img src="images/arrow.svg" class="nav-arrow" />
         <a href="#">VOLKSWAGEN E-GOLF</a>
       </div>
+      <!--Row containing image and content-->
       <div class="row">
         <div class="col-md-6 image-wrap">
           <img class="landing-img" src="images/e-golf.png" alt="e-Golf" />
@@ -86,15 +158,18 @@
         <div class="col-md-6 align-self-center p-5">
           <h1>Get ready to <span>go electric</span></h1>
           <h3>
-            e-Golf is the latest addition in the Volkswagen Electric range
+            with the e-Golf, the latest edition to the Volkswagen Electric range
           </h3>
         </div>
       </div>
     </div>
+    <!-- INFO NAVIGATION DIV -->
     <div id="info-nav" class="d-flex align-items-center text-center">
+      <!--Car name & price tag-->
       <h5 class="mr-auto">
         <span>Volkswagen e-Golf</span> starting from £28,075
       </h5>
+      <!--Buttons for info nav-->
       <div class="d-none d-none-sm d-md-flex align-items-center">
         <a id="info-nav-comparison">COMPARISON</a>
         <a id="info-nav-features">FEATURES</a>
@@ -102,7 +177,9 @@
         <a id="info-nav-enquiry">MAKE AN ENQUIRY</a>
       </div>
     </div>
+    <!-- VIDEO SECTION -->
     <div id="video-div" class="video-div container pt-3 pb-3">
+      <!--Wrap and ifame containing video-->
       <div class="youtube-wrapper">
         <iframe
           width="560"
@@ -114,10 +191,12 @@
         ></iframe>
       </div>
     </div>
+    <!-- COMPARISON SECTION -->
     <div id="comparison-div" class="comparison-div text-center pt-3 pb-3">
       <div class="container">
         <h1 class="text-center">COMPARISON</h1>
         <div class="row p-3">
+          <!-- E-GOLF SECTION OF COMPARISON -->
           <div class="comparison-card col-md-5">
             <div class="comparison-header">
               <h4>Volkswagen e-Golf</h4>
@@ -129,40 +208,46 @@
               <div class="row">
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/station-icon.png" />
-                  <p>Electric</p>
+                  <h3>Electric</h3>
                 </div>
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/co2-icon.png" />
-                  <p>0 g/km</p>
+                  <h3 class="data-count" data-count="0">0</h3>
+                  <p>g/km</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <img src="images/manual-icon.png" />
-                  <p>Automatic</p>
+                  <h3>Automatic</h3>
                 </div>
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/fuel-icon.png" />
-                  <p>0 mpg</p>
+                  <h3 class="data-count" data-count="0">0</h3>
+                  <p>mpg</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <img class="mr-auto" src="images/speed-icon.png" />
-                  <p>201 BHP</p>
+                  <img class="mr-auto" src="images/gear-icon.png" />
+                  <h3>1 Speed</h3>
                 </div>
                 <div class="col-sm-6">
-                  <img class="mr-auto" src="images/gear-icon.png" />
-                  <p>1 Speed</p>
+                  <img class="mr-auto" src="images/speed-icon.png" />
+                  <h3 class="data-count" data-count="201">0</h3>
+                  <p>BHP</p>
                 </div>
               </div>
             </div>
             <hr />
           </div>
+
+          <!-- VS TEXT FOR COMPARISON -->
           <div class="col-md-2 align-self-center pt-3 pb-3">
-            <!-- <img src="images/versus.png" /> -->
             <strong>VS</strong>
           </div>
+
+          <!-- NORMAL GOLF SECTION OF COMPAIRON -->
           <div class="comparison-card col-md-5">
             <div class="comparison-header">
               <h4>Volkswagen Golf</h4>
@@ -174,31 +259,34 @@
               <div class="row">
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/station-icon.png" />
-                  <p>Petrol</p>
+                  <h3>Petrol</h3>
                 </div>
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/co2-icon.png" />
-                  <p>108 g/km</p>
+                  <h3 class="data-count" data-count="108">0</h3>
+                  <p>g/km</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <img src="images/manual-icon.png" />
-                  <p>Manual</p>
+                  <h3>Manual</h3>
                 </div>
                 <div class="col-sm-6">
                   <img class="mr-auto" src="images/fuel-icon.png" />
-                  <p>46.3mpg</p>
+                  <h3 class="data-count" data-count="46.3">0</h3>
+                  <p>mpg</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <img class="mr-auto" src="images/speed-icon.png" />
-                  <p>113 BHP</p>
+                  <img class="mr-auto" src="images/gear-icon.png" />
+                  <h3>6 Speed</h3>
                 </div>
                 <div class="col-sm-6">
-                  <img class="mr-auto" src="images/gear-icon.png" />
-                  <p>6 Speed</p>
+                  <img class="mr-auto" src="images/speed-icon.png" />
+                  <h3 class="data-count" data-count="113">0</h3>
+                  <p>BHP</p>
                 </div>
               </div>
             </div>
@@ -207,11 +295,14 @@
         </div>
       </div>
     </div>
+    <!-- FEATURES SECTION -->
     <div id="features-div">
       <div class="container pt-3 pb-3">
+        <!-- Features header -->
         <h1 class="text-center">FEATURES</h1>
         <div class="d-none d-sm-none d-md-block">
           <div class="row no-gutters text-center">
+            <!-- Buttons on desktop features page -->
             <div class="col-md-3">
               <a id="feature-button-key" class="feature-button feature-active"
                 >KEY FEATURES</a
@@ -233,7 +324,9 @@
               >
             </div>
           </div>
+          <!-- Content for each section -->
           <div class="feature-content">
+            <!-- KEY features section -->
             <div id="feature-key" class="feature-content-section">
               <div class="row no-gutters">
                 <div class="col-6">
@@ -268,6 +361,7 @@
                 </div>
               </div>
             </div>
+            <!-- INTERIOR features section -->
             <div id="feature-interior" class="feature-content-section d-none">
               <div class="row no-gutters">
                 <div class="col-6">
@@ -299,6 +393,7 @@
                 </div>
               </div>
             </div>
+            <!-- EXTERIOR features section -->
             <div id="feature-exterior" class="feature-content-section d-none">
               <div class="row no-gutters">
                 <div class="col-6">
@@ -309,25 +404,23 @@
                   <hr />
                   <div class="row">
                     <div class="col-6">
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
+                      <p>16in Alloy Wheels</p>
+                      <p>Body Coloured Bumpers</p>
+                      <p>Body Coloured Door Handles</p>
+                      <p>Electric Windows</p>
+                      <p>Heated Windscreen</p>
+                      <p>Mirror Pack</p>
+                      <p>Rear Diffuser - Black</p>
                     </div>
                     <div class="col-6">
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
+                      <p>Tyre Repair Kit</p>
+                      <p>Unique e-Golf Badgeing</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- SAFTEY & SECURITY features section -->
             <div id="feature-saftey" class="feature-content-section d-none">
               <div class="row no-gutters">
                 <div class="col-6">
@@ -338,20 +431,19 @@
                   <hr />
                   <div class="row">
                     <div class="col-6">
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
+                      <p>Airbags</p>
+                      <p>Predictive Pedestrian Protection</p>
+                      <p>Luggage Compartment Light</p>
+                      <p>Remote Central Locking with 2 Remote Folding Keys</p>
+                      <p>Automatic Post-Collision Braking Stystem</p>
+                      <p>ABS</p>
                     </div>
                     <div class="col-6">
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
-                      <p>Test</p>
+                      <p>Vanity Mirrors - Illuminated</p>
+                      <p>LED Headlights</p>
+                      <p>Warning Buzzer</p>
+                      <p>Front Assist</p>
+                      <p>Alarm with Interior Protection</p>
                     </div>
                   </div>
                 </div>
@@ -359,7 +451,9 @@
             </div>
           </div>
         </div>
+        <!-- Features section for MOBILE ONLY -->
         <div class="d-sm-block d-md-none">
+          <!-- KEY feature section - MOBILE ONLY -->
           <div class="feature-content text-center mb-3">
             <h2>Key Features</h2>
             <img class="feature-image-sm" src="images/feature1.webp" />
@@ -384,6 +478,7 @@
               <p>Car-Net App-Connect</p>
             </div>
           </div>
+          <!-- INTERIOR feature section - MOBILE ONLY -->
           <div class="feature-content text-center mb-3">
             <h2>e-Golf Interior</h2>
             <img class="feature-image-sm" src="images/feature2.webp" />
@@ -407,6 +502,7 @@
               </p>
             </div>
           </div>
+          <!-- EXTERIOR feature section - MOBILE ONLY -->
           <div class="feature-content text-center mb-3">
             <h2>e-Golf Exterior</h2>
             <img class="feature-image-sm" src="images/feature3.webp" />
@@ -414,23 +510,18 @@
               <a id="learn-more-exterior" class="mb-2">Learn More</a>
             </div>
             <div id="feature-exterior-sm" class="feature-description-sm d-none">
-              <p>Lights On' Remainder warning buzzer</p>
-              <p>8" colour touch screen</p>
-              <p>Stop/Start system</p>
-              <p>ACC - Adaptive cruise control with front assist</p>
-              <p>
-                Bluetooth telephone and audio connection for compatible devices
-              </p>
-              <p>Driver alert system</p>
-              <p>8 speakers</p>
-              <p>
-                Bluetooth telephone and audio connection for compatible devices
-              </p>
-              <p>Driver profile selection</p>
-              <p>Drive mode selector</p>
-              <p>Car-Net App-Connect</p>
+              <p>16in Alloy Wheels</p>
+              <p>Body Coloured Bumpers</p>
+              <p>Body Coloured Door Handles</p>
+              <p>Electric Windows</p>
+              <p>Heated Windscreen</p>
+              <p>Mirror Pack</p>
+              <p>Rear Diffuser - Black</p>
+              <p>Tyre Repair Kit</p>
+              <p>Unique e-Golf Badgeing</p>
             </div>
           </div>
+          <!-- SAFTEY & SECURITY feature section - MOBILE ONLY -->
           <div class="feature-content text-center mb-3">
             <h2>Volkswagen Saftey & Secruity</h2>
             <img class="feature-image-sm" src="images/feature4.webp" />
@@ -438,34 +529,35 @@
               <a id="learn-more-saftey" class="mb-2">Learn More</a>
             </div>
             <div id="feature-saftey-sm" class="feature-description-sm d-none">
-              <p>Lights On' Remainder warning buzzer</p>
-              <p>8" colour touch screen</p>
-              <p>Stop/Start system</p>
-              <p>ACC - Adaptive cruise control with front assist</p>
-              <p>
-                Bluetooth telephone and audio connection for compatible devices
-              </p>
-              <p>Driver alert system</p>
-              <p>8 speakers</p>
-              <p>
-                Bluetooth telephone and audio connection for compatible devices
-              </p>
-              <p>Driver profile selection</p>
-              <p>Drive mode selector</p>
-              <p>Car-Net App-Connect</p>
+              <p>Airbags</p>
+              <p>Predictive Pedestrian Protection</p>
+              <p>Luggage Compartment Light</p>
+              <p>Remote Central Locking with 2 Remote Folding Keys</p>
+              <p>Automatic Post-Collision Braking Stystem</p>
+              <p>ABS</p>
+              <p>Vanity Mirrors - Illuminated</p>
+              <p>LED Headlights</p>
+              <p>Warning Buzzer</p>
+              <p>Front Assist</p>
+              <p>Alarm with Interior Protection</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- GOING ELECTRIC SECTION -->
     <div id="electric-div" class="electric-div">
       <div class="container pt-3 pb-3">
+        <!-- Going electric header -->
         <h1 class="text-center">Going Electric</h1>
         <h3 class="text-center">
           Still unsure about going electric? Here are 5 reasons why you
           should...
         </h3>
+        <!-- Section one of going electric information -->
+        <!-- 5 points for going electric -->
         <div class="row align-items-center">
+          <!-- Text description -->
           <div class="electric-description col-md-6">
             <a>
               <h4>1. Economical to run</h4>
@@ -492,16 +584,21 @@
               <p>New technology, same pedigree. Quality you can trust.</p>
             </a>
           </div>
+          <!-- Image -->
           <div class="col-md-6">
             <img src="images/electric.webp" />
           </div>
         </div>
+        <!-- Section two of going electric information -->
+        <!-- Government Grant -->
         <div class="row align-items-center">
+          <!-- Image -->
           <div class="col-md-6">
             <img src="images/ultra-low.png" />
           </div>
+          <!-- Government grant content -->
           <div class="col-md-6">
-            <h3>Goverment grant</h3>
+            <h3>Government grant</h3>
             <h5>
               e‑Golf 'On the road' retail price including Plug-in car grant from
               £28,075. Manufacturer recommended 'On the road' retail price from
@@ -531,22 +628,29 @@
         </div>
       </div>
     </div>
+    <!-- ENQUIRY SECTION -->
     <div id="enquiry-div" class="enquiry-div">
       <div class="container pt-3 pb-3">
+        <!-- Enquiry Header -->
         <h1 class="text-center">MAKE AN ENQUIRY</h1>
         <h4 class="text-center">
           Sold? Then fill out the form below to let us know you are interested.
         </h4>
+        <!-- Grid row -->
         <div class="row">
+          <!-- Content column -->
           <div class="col-md-4">
             <h5 class="mt-3">
-              We promise to get back to you within the next working day. We
-              value yaydadihwdjad awjda iwojdowa
+              To enquire, inform us of your intrest or place a pre-order fill
+              out the from with all the correct details. We promise to get back
+              to you within the next working day.
             </h5>
           </div>
+          <!-- Form -->
           <div class="col-md-8">
-            <form>
+            <form action="" name="enquire">
               <div class="form-group row">
+                <!-- Form: title -->
                 <label for="titleSelect" class="col-sm-3 col-form-label">
                   TITLE *
                 </label>
@@ -561,6 +665,7 @@
                   </select>
                 </div>
               </div>
+              <!-- Form: First Name -->
               <div class="form-group row">
                 <label for="firstName" class="col-sm-3 col-form-label">
                   FIRST NAME *
@@ -574,6 +679,7 @@
                   />
                 </div>
               </div>
+              <!-- Form: Last Name -->
               <div class="form-group row">
                 <label for="lastName" class="col-sm-3 col-form-label">
                   LAST NAME *
@@ -587,6 +693,7 @@
                   />
                 </div>
               </div>
+              <!-- Form: Email Address -->
               <div class="form-group row">
                 <label for="emailAddress" class="col-sm-3 col-form-label">
                   EMAIL ADDRESS *
@@ -600,6 +707,7 @@
                   />
                 </div>
               </div>
+              <!-- Form: Mobile Number -->
               <div class="form-group row">
                 <label for="mobileNumber" class="col-sm-3 col-form-label">
                   MOBILE NUMBER *
@@ -613,6 +721,7 @@
                   />
                 </div>
               </div>
+              <!-- Form: Message -->
               <div class="form-group row">
                 <label for="enquiryMessage" class="col-sm-3 col-form-label">
                   MESSAGE *
@@ -625,19 +734,22 @@
                   ></textarea>
                 </div>
               </div>
+              <!-- Form: disclaimer -->
               <p>
                 By submitting your details, we will process your data in
                 accordance with our privacy policy which can be viewed here.
               </p>
+              <!-- Form: submit button -->
               <button type="submit">SUBMIT</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- FOOTER SECTION -->
     <footer class="p-5">
       <div class="row">
+        <!-- Footer column: about / image -->
         <div class="col-md-3 text-center mb-5">
           <img src="images/logo-alt.png" />
           <p>
@@ -645,6 +757,7 @@
             since 2001.
           </p>
         </div>
+        <!-- Footer column: useful links -->
         <div class="col-md-3 mb-5">
           <h5 class="text-center">USEFUL LINKS</h5>
           <hr />
@@ -657,6 +770,7 @@
             <a href="#">Contact Us</a>
           </div>
         </div>
+        <!-- Footer column: terms of service links -->
         <div class="col-md-3 mb-5">
           <h5 class="text-center">TERMS OF SERVICE</h5>
           <hr />
@@ -666,6 +780,7 @@
             <a href="#">Cookies</a>
           </div>
         </div>
+        <!-- Footer column: find us information -->
         <div class="col-md-3 mb-5">
           <h5 class="text-center">FIND US</h5>
           <hr />
@@ -678,14 +793,17 @@
           <p>Email: contact@premiumvolkswagon.com</p>
         </div>
       </div>
+      <!-- Footer row: company number / social links -->
       <div class="row">
+        <!-- Footer column: company number -->
         <div class="col-md-8">
           Company register number: Premium Volkswagon 1238718273
         </div>
+        <!-- Footer column: social links -->
         <div class="ml-auto pr-3">
-          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-          <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-          <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x pr-2" aria-hidden="true"></i>
+          <i class="fa fa-facebook-official fa-2x pr-2" aria-hidden="true"></i>
+          <i class="fa fa-youtube fa-2x pr-2" aria-hidden="true"></i>
           <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
         </div>
       </div>
