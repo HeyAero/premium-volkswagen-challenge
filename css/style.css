@@ -205,7 +205,8 @@ p {
   color: black;
 }
 
-.feature-description {
+.feature-description,
+.feature-description-sm {
   padding: 10px;
 }
 
@@ -213,7 +214,8 @@ p {
   padding: 10px;
 }
 
-.feature-description p {
+.feature-description p,
+.feature-description-sm p {
   border-bottom: 1px var(--text-main-hover) solid;
 }
 
@@ -221,4 +223,24 @@ p {
   padding: 10px;
   width: 100%;
   border-right: 1px var(--text-main-hover) solid;
+}
+
+.feature-image-sm {
+  padding: 10px;
+  width: 100%;
+}
+
+#learn-more-key,
+#learn-more-interior,
+#learn-more-exterior,
+#learn-more-saftey {
+  background-color: var(--nav-bg-color);
+  border-radius: 25px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.button-wrap {
+  padding: 10px 0 20px 0;
 }
