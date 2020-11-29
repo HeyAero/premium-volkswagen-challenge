@@ -6,6 +6,7 @@
   /* Nav Colors */
   --nav-bg-color: #013973;
   --nav-border-color: #0f263e;
+  --dropdown-bg-color-hover: #ddd;
 
   /* Info Nav Colors */
   --infonav-bg-color: #282828;
@@ -39,6 +40,14 @@ nav a {
   font-size: 1.2em;
   font-weight: 700;
   padding: 0 20px 0 20px;
+}
+
+a {
+  color: white;
+}
+
+a.disabled {
+  color: white;
 }
 
 .active,
@@ -108,12 +117,12 @@ span {
 }
 
 #info-nav {
+  color: white;
   padding: 10px;
   background-color: var(--infonav-bg-color);
 }
 
 #info-nav a {
-  color: var(--text-main-color);
   font-weight: 700;
   font-size: 1.05em;
   padding: 0 20px 0 20px;
@@ -137,6 +146,10 @@ span {
 #info-nav h5 span {
   font-size: 1.5em;
   font-weight: 500;
+}
+
+.info-nav-active {
+  color: var(--landing-span-color);
 }
 
 .video-div h1 {
@@ -204,7 +217,7 @@ span {
   width: 16px;
 }
 
-.features-div h1 {
+#features-div h1 {
   color: black;
 }
 
@@ -358,4 +371,50 @@ footer p {
 
 .footer-bottom {
   background-color: black;
+}
+
+.dropdown-menu-cars,
+.dropdown-menu-vans,
+.dropdown-menu-electric,
+.dropdown-menu-services {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-menu-cars a,
+.dropdown-menu-vans a,
+.dropdown-menu-electric a,
+.dropdown-menu-services a {
+  float: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-menu-cars a:hover,
+.dropdown-menu-vans a:hover,
+.dropdown-menu-electric a:hover,
+.dropdown-menu-services a:hover {
+  color: black;
+  background-color: var(--dropdown-bg-color-hover);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-cars:hover .dropdown-menu-cars {
+  display: block;
+}
+.dropdown-vans:hover .dropdown-menu-vans {
+  display: block;
+}
+.dropdown-electric:hover .dropdown-menu-electric {
+  display: block;
+}
+.dropdown-services:hover .dropdown-menu-services {
+  display: block;
 }

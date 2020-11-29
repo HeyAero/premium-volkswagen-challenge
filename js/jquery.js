@@ -1,3 +1,5 @@
+// Feature buttons on desktop
+
 $('#feature-button-key').click(function () {
   $('#feature-button-key').addClass('feature-active');
   $('#feature-button-interior').removeClass('feature-active');
@@ -46,6 +48,8 @@ $('#feature-button-saftey').click(function () {
   $('#feature-exterior').addClass('d-none');
 });
 
+// Mobile feature buttons
+
 $('#learn-more-key').click(function () {
   if ($('#feature-key-sm').hasClass('d-none')) {
     $('#feature-key-sm').removeClass('d-none');
@@ -76,4 +80,41 @@ $('#learn-more-saftey').click(function () {
   } else {
     $('#feature-saftey-sm').addClass('d-none');
   }
+});
+
+// Scrolldown
+$('#info-nav-comparison').click(function () {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#comparison-div').offset().top - 150,
+    },
+    2000
+  );
+});
+
+$('#info-nav-features').click(function () {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#features-div').offset().top - 150,
+    },
+    2000
+  );
+});
+
+$('#info-nav-electric').click(function () {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#electric-div').offset().top - 150,
+    },
+    2000
+  );
+});
+
+$('#info-nav-enquiry').click(function () {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#enquiry-div').offset().top - 50,
+    },
+    2000
+  );
 });
