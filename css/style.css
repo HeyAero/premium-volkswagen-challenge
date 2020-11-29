@@ -1,3 +1,23 @@
+/*
+  *********************************
+  DOCUMENT ORDER
+  *********************************
+  1. :root variables and overflow
+  2. Initalise tags
+  3. Global classes
+  4. Main navigation
+  5. Dropdown nav menu
+  6. Mobile nav menu
+  7. Footer
+  8. Small nav
+  9. Info nav
+  10. Landing section
+  11. Video section
+  12. Features section
+  13. Going electric section
+  14. Enquiry section
+*/
+
 :root {
   /*
   
@@ -35,6 +55,9 @@
   --feature-bg-color: #f4f4f4;
   /* Feature Border Color */
   --footer-border-color: #013367;
+
+  /***** FIXING OVEFLOW *****/
+  overflow-x: hidden;
 }
 
 /***** INITALISE TAGS *****/
@@ -240,24 +263,6 @@ nav img {
   text-decoration: none;
 }
 
-/***** LANDING DIV *****/
-.landing-div {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--nav-bg-color),
-    var(--landing-gradient-color)
-  );
-}
-
-.landing-div span {
-  color: var(--landing-span-color);
-}
-
-.landing-img {
-  width: 100%;
-  padding: 25px;
-}
-
 /***** INFO NAV *****/
 
 #info-nav {
@@ -294,6 +299,24 @@ nav img {
 
 .info-nav-active {
   color: var(--landing-span-color);
+}
+
+/***** LANDING DIV *****/
+.landing-div {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--nav-bg-color),
+    var(--landing-gradient-color)
+  );
+}
+
+.landing-div span {
+  color: var(--landing-span-color);
+}
+
+.landing-img {
+  width: 100%;
+  padding: 25px;
 }
 
 /***** VIDEO SECTION *****/
@@ -407,6 +430,8 @@ p {
   padding: 10px;
   width: 100%;
 }
+
+/* Mobile section of features */
 
 .feature-image-sm {
   padding: 10px;
